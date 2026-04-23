@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Allegience - Hiring Solution</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+  </head>
+  <body>
+	
+    <div class="bg-top navbar-light">
+      <div class="container">
+        <div class="row no-gutters d-flex align-items-center align-items-stretch">
+          <div class="col-md-4 d-flex align-items-center py-4">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Allegience Logo" height="50" class="mr-2">
+            </a>
+          </div>
+          <div class="col-lg-8 d-block">
+            <div class="row d-flex">
+              <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                <div class="text">
+                  <span>Email</span>
+                  <span>info@allegiancehiring.com</span>
+                </div>
+              </div>
+              <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                <div class="text">
+                  <span>Call</span>
+                  <span>Call Us: +91 9888697888</span>
+                </div>
+              </div>
+              <div class="col-md topper d-flex align-items-center justify-content-end">
+                <p class="mb-0 d-block">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYczCfTtVc8lwKiYpqdXUUmg9PIV2YEtO873UD7j7CR3WHYA/viewform?usp=header" target="_blank" class="btn btn-primary btn-lg" style="padding: 15px 30px; font-weight: bold;">
+                    <span>Free Consulting</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container d-flex align-items-center">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    
+    <form action="#" class="searchform order-lg-last">
+      <div class="form-group d-flex">
+        <input type="text" class="form-control pl-3" placeholder="Search">
+        <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+      </div>
+    </form>
+    
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link">About us</a></li>
+        
+        <li class="nav-item dropdown premium-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="prDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Permanent Residency
+  </a>
+  
+  <div class="dropdown-menu shadow-lg border-0 p-3" aria-labelledby="prDropdown" style="border-radius: 12px; min-width: 260px; border-top: 4px solid #F96D00 !important;">
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('canada') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-airplane mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Canada PR</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('australia') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-airplane mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Australia PR</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('ukwork') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-airplane mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> UK PR</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2" href="{{ url_for('europe_work') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-airplane mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Europe PR</span>
+    </a>
+
+  </div>
+</li>
+      
+          
+        </li>
+        <li class="nav-item dropdown premium-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="jobSeekerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Job Seeker Visas
+  </a>
+  
+  <div class="dropdown-menu shadow-lg border-0 p-3" aria-labelledby="jobSeekerDropdown" style="border-radius: 12px; min-width: 260px; border-top: 4px solid #F96D00 !important; max-height: 350px; overflow-y: auto;">
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('germanyjob') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Germany</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('spain') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Spain</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('portugal') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Portugal</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('uae') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> UAE</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('sweden') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Sweden</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('australia') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Australia</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('canada') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Canada</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="#">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Denmark</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2" href="{{ url_for('ukwork') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-briefcase mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> UK</span>
+    </a>
+
+  </div>
+</li>
+
+<li class="nav-item dropdown premium-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="settlementDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Migrate & Settlement
+  </a>
+  
+  <div class="dropdown-menu shadow-lg border-0 p-3" aria-labelledby="settlementDropdown" style="border-radius: 12px; min-width: 260px; border-top: 4px solid #F96D00 !important;">
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('usa_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> USA</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('uk_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> UK</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('canada_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Canada</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('australia_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Australia</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2" href="{{ url_for('europe_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Europe</span>
+    </a>
+
+  </div>
+</li>
+
+<li class="nav-item dropdown premium-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="settlementDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Citizenship
+  </a>
+  
+  <div class="dropdown-menu shadow-lg border-0 p-3" aria-labelledby="settlementDropdown" style="border-radius: 12px; min-width: 260px; border-top: 4px solid #F96D00 !important;">
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('usa_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> USA</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('europe_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Europe</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="{{ url_for('caribbean_settlement') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Caribbean</span>
+    </a>
+    
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2 border-bottom" href="#">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Africa</span>
+    </a>
+
+    <a class="dropdown-item d-flex justify-content-between align-items-center py-2" href="{{ url_for('asia') }}">
+      <span style="font-weight: 600; color: #334155;"><i class="ion-ios-home mr-2" style="color: #0ea5e9; font-size: 20px; width: 25px; text-align: center; display: inline-block;"></i> Asia</span>
+    </a>
+
+  </div>
+</li>
+        
+        <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link">Study</a></li>
+        <li class="nav-item"><a href="{{ url_for('query') }}" class="nav-link">Have any Query</a></li>
+        <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+
+
+        <!-- NEW: The Language Selector on the right -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item d-flex align-items-center custom-lang-wrap pl-lg-3">
+      <div class="gtranslate_wrapper"></div>
+    </li>
+  </ul>
+</div>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="ftco-footer modern-footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-4">
+        <h4>Allegiance Hiring</h4>
+        <p>
+          We help professionals and families achieve their dream of settling abroad with expert
+          guidance for work permits, permanent residency, and global career transitions.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100078120453461&sk=friends_all
+"><i class="icon-facebook"></i></a>
+          <a href="https://www.instagram.com/allegiancehiringsolutions?igsh=eGV6bTF2cXZsamhi"><i class="icon-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/allegiancehiringsolutions/about/"><i class="icon-linkedin"></i></a>
+          <a href="#"><i class="icon-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="{{ url_for('canada_settlement') }}">Work & Settle in Canada</a></li>
+          <li><a href="{{ url_for('uk_settlement') }}">Work & Settle in UK</a></li>
+          <li><a href="{{ url_for('australia_settlement') }}">Work & Settle in Australia</a></li>
+          <li><a href="{{ url_for('usa_settlement') }}">Work & Settle in USA</a></li>
+          <li><a href="{{ url_for('germanyjob') }}">Work & Settle in Germany</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Permanent Residency (PR)</a></li>
+          <li><a href="#">Work Permit Assistance</a></li>
+          <li><a href="#">Corporate Immigration</a></li>
+          <li><a href="#">Skills Assessment</a></li>
+          <li><a href="#">Post-Landing Settlement</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 mb-4">
+        <h4>Contact Us</h4>
+        
+        <div class="row">
+          
+          <div class="col-sm-6 mb-3">
+            <strong style="color: #F96D00; font-size: 13px; text-transform: uppercase;">Corporate Office</strong>
+            <p class="mb-1" style="font-size: 14px; line-height: 1.6;"><i class="icon-map-marker"></i> 2nd Floor, Vijetha Golden Empire, Moosarambagh Rd Above Imagine Apple Store, Pillar No 1504, Moosarambagh, X Road, Dilsukhnagar, Hyderabad, Telangana 500036</p>
+          </div>
+
+          <div class="col-sm-6 mb-3">
+            <strong style="color: #F96D00; font-size: 13px; text-transform: uppercase;">Branch Office</strong>
+            <p class="mb-1" style="font-size: 14px; line-height: 1.6;"><i class="icon-map-marker"></i> 310, 3rd floor SL Jubilee complex, Road no 36, Jubilee Hills, Hyderabad, India.</p>
+          </div>
+
+        </div> <hr style="border-top: 1px solid rgba(255,255,255,0.1); margin: 15px 0;">
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div>
+            <p class="mb-1" style="font-size: 14px;"><i class="icon-phone" style="color: #F96D00;"></i> +91 9888697888</p>
+            <p class="mb-0" style="font-size: 14px;"><i class="icon-envelope" style="color: #F96D00;"></i> info@allegiancehiring.com</p>
+          </div>
+          <div class="mt-2 mt-md-0">
+            <a href="/contact" class="btn btn-primary py-2 px-3" style="background-color: #F96D00; border: none;">Book Free Assessment</a>
+          </div>
+        </div>
+
+      </div> </div>
+
+    <hr>
+
+    <div class="footer-bottom text-center">
+      <p>
+        © <script>document.write(new Date().getFullYear());</script>
+        Swarup❤️ . All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{{ url_for('static', filename='js/google-map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+<script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>  
+   
+
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    
+  </body>
+</html>

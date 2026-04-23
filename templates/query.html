@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800;">Have Any Query?</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Submit Query <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      <div class="col-lg-7 mb-4 mb-lg-0">
+  <div class="shadow-lg p-5 bg-white d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 20px; border: 1px solid #eee; height: 100%; min-height: 400px;">
+    
+    <h3 class="mb-3">Apply to Allegiance</h3>
+    <p class="mb-4 text-muted">Please have your resume ready (PDF or Word document) before starting the application.</p>
+    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYczCfTtVc8lwKiYpqdXUUmg9PIV2YEtO873UD7j7CR3WHYA/viewform?usp=header" target="_blank" class="btn btn-primary btn-lg" style="padding: 15px 30px; font-weight: bold;">
+      Open Application Form
+    </a>
+
+  </div>
+</div>
+
+      <!-- RIGHT SIDE: The Secure Payment Card -->
+      <div class="col-lg-5">
+        <div class="shadow-lg p-5 bg-white d-flex flex-column justify-content-center h-100" style="border-radius: 20px; border: 1px solid #eee;">
+          
+          <h3 style="font-weight: 800; color: #1e293b; margin-bottom: 15px;">Priority Consultation</h3>
+          <p class="text-muted mb-4">Submit your details in the form, then complete your secure payment to book your priority evaluation.</p>
+          
+          <h2 style="font-size: 42px; font-weight: 900; color: #F96D00; margin-bottom: 30px;">
+            ₹1,500<span style="font-size: 16px; color: #64748b; font-weight: 500;">/INR</span>
+          </h2>
+          
+          <ul class="list-unstyled mb-5">
+             <li class="mb-3"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00; font-size: 18px;"></i> Comprehensive profile evaluation</li>
+             <li class="mb-3"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00; font-size: 18px;"></i> 30-Minute expert strategy call</li>
+             <li class="mb-3"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00; font-size: 18px;"></i> 100% Confidential processing</li>
+          </ul>
+
+          <!-- PASTE YOUR PAYMENT LINK HERE -->
+          <a href="YOUR_PAYMENT_LINK_HERE" target="_blank" class="btn btn-primary py-3" style="border-radius: 30px; font-weight: 700; width: 100%; font-size: 16px; text-transform: uppercase;">
+            Pay Now Securely <i class="ion-ios-lock ml-2"></i>
+          </a>
+          
+          <p class="text-center mt-3 mb-0" style="font-size: 12px; color: #94a3b8;">Payments processed securely via Razorpay/Stripe.</p>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 text-center ftco-animate">
+            <p class="text-muted">Prefer to talk? Call us directly at <a href="tel://+919888697888" style="color: #F96D00; font-weight: 700;">+91 9888697888</a></p>
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

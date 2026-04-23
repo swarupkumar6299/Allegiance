@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in Australia</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Australia Immigration <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">General Skilled Migration (GSM)</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Secure Your Future Down Under</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Australia offers an unmatched combination of high earning potential, excellent work-life balance, and spectacular landscapes. Through the SkillSelect points-based system, professionals and tradespeople from around the globe can build a highly rewarding career and secure permanent residency for their entire family.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/australia-family.avif') }}" alt="Work in Australia" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Australian PR Pathways</h3>
+            <p class="text-muted mb-4">We specialize in identifying the best visa subclass for your specific occupation and experience level. Here are the most popular routes to Australian Permanent Residency:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">1. Skilled Independent Visa (Subclass 189)</h5>
+                    <p class="text-muted small mb-0">The most sought-after PR visa. It does not require a sponsor or state nomination. If your occupation is on the MLTSSL (Medium and Long-term Strategic Skills List) and you score enough points, you can live and work anywhere in Australia.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">2. Skilled Nominated Visa (Subclass 190)</h5>
+                    <p class="text-muted small mb-0">If your occupation is in demand in a specific Australian state or territory, they can nominate you. This grants you an extra 5 PR points and allows you to settle in that specific region.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">3. Employer Sponsored Visas (TSS 482 / 186 PR)</h5>
+                    <p class="text-muted small mb-0">For professionals who have a concrete job offer from an approved Australian employer. This can act as a direct route to PR or a transition pathway after working in Australia for a few years.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Professionals Choose Australia</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-briefcase"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">High Earning Potential</h5>
+                            <p class="text-muted small mb-0">One of the highest minimum wages in the world, with massive salaries in IT, Healthcare, and Mining.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-heart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Medicare Access</h5>
+                            <p class="text-muted small mb-0">Permanent residents get access to Australia's world-class, heavily subsidized public healthcare system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family Inclusion</h5>
+                            <p class="text-muted small mb-0">Include your spouse and dependent children. Your spouse receives full work rights automatically.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-globe"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Citizenship Pathway</h5>
+                            <p class="text-muted small mb-0">Live in Australia for 4 years on a valid visa (including 1 year as a PR) to apply for citizenship.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Free PR Points Check</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if you meet the minimum 65 points required for Australian immigration. Get a precise evaluation today.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Calculate My Points</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top In-Demand Sectors</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Registered Nurses & Medical</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Software Programmers</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Civil & Structural Engineers</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Trades (Electricians, Mechanics)</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Education & Teaching</li>
+                </ul>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Your Journey to Australia</h2>
+            <p class="text-muted">Navigating SkillSelect can be complex, but we simplify it into four proven steps.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">01</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Skills & English Assessment</h4>
+              <p class="text-muted small">We help you obtain a positive Skills Assessment from the relevant authority (e.g., ACS, Engineers Australia) and guide your IELTS/PTE prep.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">02</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Expression of Interest (EOI)</h4>
+              <p class="text-muted small">We draft and submit a highly optimized Expression of Interest (EOI) into the Department of Home Affairs SkillSelect system.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">03</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Invitation to Apply (ITA)</h4>
+              <p class="text-muted small">Once you score high enough in the pool, you will receive an official Invitation to Apply for your Permanent Residency visa.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">04</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Visa Lodgment & Approval</h4>
+              <p class="text-muted small">We handle the final visa lodgment, including medicals and police checks, ensuring a smooth path to your visa grant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> What is the minimum points requirement for Australia PR?</h5>
+                <p class="text-muted small mb-0">You must score a minimum of 65 points on the SkillSelect system to lodge an Expression of Interest (EOI). Points are awarded for age, English proficiency, work experience, and education.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> What is a Skills Assessment?</h5>
+                <p class="text-muted small mb-0">Before you can apply for PR, an authorized Australian assessing body must verify that your education and work experience meet the Australian standards for your nominated occupation.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Do I need a job offer from an Australian company?</h5>
+                <p class="text-muted small mb-0">No! If you are applying under the General Skilled Migration programs (Subclass 189 or 190), you do not need a job offer to secure your Permanent Residency.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Advance Your Career in Australia?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Speak with our migration experts today to calculate your points and map out your visa strategy.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Calculate Your Points Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

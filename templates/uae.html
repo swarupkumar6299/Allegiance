@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in the UAE</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">UAE Immigration <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Golden Visa & Skilled Employment</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Accelerate Your Career with Tax-Free Income</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">The United Arab Emirates is a premier global hub for innovation, luxury, and business. With 0% personal income tax, unparalleled safety, and groundbreaking new residency programs like the Golden and Green Visas, professionals and their families can secure a luxurious, long-term future in Dubai, Abu Dhabi, and beyond.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/uae-job.avif') }}" alt="Work in the UAE" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top UAE Residency Pathways</h3>
+            <p class="text-muted mb-4">The UAE has modernized its immigration system, moving beyond the traditional employer-sponsored model to attract top global talent. We help you navigate these premium routes:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">1. The 10-Year Golden Visa</h5>
+                    <p class="text-muted small mb-0">The ultimate self-sponsored residency. Available to highly skilled professionals (earning AED 30,000+ per month), investors, doctors, scientists, and outstanding students. It grants you and your family 10 years of renewable residency independent of any employer.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">2. The 5-Year Green Visa</h5>
+                    <p class="text-muted small mb-0">A flexible, self-sponsored 5-year residency aimed at freelancers, self-employed individuals, and skilled employees (bachelor's degree required, minimum salary of AED 15,000). It allows you to easily sponsor family members with extended grace periods.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">3. Standard Employment Visa (Mainland & Free Zone)</h5>
+                    <p class="text-muted small mb-0">The traditional 2-year residency sponsored by your UAE employer. We assist professionals in ensuring their contracts are properly registered with MOHRE or the relevant Free Zone authority.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Professionals Choose the UAE</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-line-chart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">0% Income Tax</h5>
+                            <p class="text-muted small mb-0">Keep 100% of your hard-earned salary. The UAE levies absolutely no personal income tax on residents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-shield"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Unrivaled Safety</h5>
+                            <p class="text-muted small mb-0">Consistently ranked as one of the safest countries globally, offering incredible peace of mind for families.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-building"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">World-Class Lifestyle</h5>
+                            <p class="text-muted small mb-0">Experience cutting-edge infrastructure, global networking, premium healthcare, and elite international schools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family Sponsorship</h5>
+                            <p class="text-muted small mb-0">Easily sponsor your spouse, unmarried sons up to age 25, and unmarried daughters of any age.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Check Eligibility</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your salary, degree, and profession qualify you for the exclusive 10-Year Golden Visa or 5-Year Green Visa.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Book Free Consultation</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top Free Zones & Hubs</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> DIFC (Dubai Finance)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> ADGM (Abu Dhabi Finance)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Dubai Internet City (Tech)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> DMCC (Commodities & Trade)</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> TwoFour54 (Media & Creative)</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Your Journey to the UAE</h2>
+            <p class="text-muted">The UAE is famous for its efficient, digitized immigration system. We guide you through the fast-tracked ICP and GDRFA portals.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">01</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Profile & Equivalency</h4>
+              <p class="text-muted small">We verify your employment contract and help attest your university degree (MOFA), applying for equivalency if required for the Golden Visa.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">02</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Entry Permit</h4>
+              <p class="text-muted small">We submit your application to the ICP or GDRFA (Dubai) to secure your initial electronic Entry Permit to travel to the UAE.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">03</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Medical & Biometrics</h4>
+              <p class="text-muted small">Upon arrival, we schedule your mandatory DHA/SEHA medical fitness test and your fingerprinting appointment for your identity card.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">04</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Emirates ID Issuance</h4>
+              <p class="text-muted small">Your residency is officially stamped electronically, and your physical Emirates ID is issued, giving you full access to UAE services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Do I need a sponsor to get the Golden Visa?</h5>
+                <p class="text-muted small mb-0">No! The Golden Visa and Green Visa are self-sponsored. This means your residency is not tied to a specific employer, giving you complete freedom to change jobs or start a business without risking your visa status.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> What is the difference between Mainland and Free Zone?</h5>
+                <p class="text-muted small mb-0">A Mainland company is registered with the Department of Economic Development (DED) and can do business anywhere in the UAE. A Free Zone company operates within designated areas (like DIFC or DMCC) and offers 100% foreign ownership and specialized tax benefits, but is restricted to doing business within that zone or internationally.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> What is an Emirates ID?</h5>
+                <p class="text-muted small mb-0">The Emirates ID is an identity card issued by the Federal Authority for Identity, Citizenship, Customs and Port Security (ICP). It is a legal requirement for all citizens and residents and is used to access government services, open bank accounts, and rent property.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Elevate Your Career in the UAE?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Speak with our Middle East immigration experts to evaluate your salary, verify your degree, and start your visa application.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Evaluate Your Profile Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

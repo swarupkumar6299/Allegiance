@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/visa.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white;">Contact Us</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: white;">Contact <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info justify-content-center">
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center bg-light shadow-sm" style="border-radius: 8px; width: 100%;">
+          		<div class="icon d-flex align-items-center justify-content-center mb-3" style="font-size: 30px; color: #F96D00;">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Building, 3rd Floor Plot, SL_Jubilee, Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center bg-light shadow-sm" style="border-radius: 8px; width: 100%;">
+          		<div class="icon d-flex align-items-center justify-content-center mb-3" style="font-size: 30px; color: #F96D00;">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+919888697888">+91 9888697888</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center bg-light shadow-sm" style="border-radius: 8px; width: 100%;">
+          		<div class="icon d-flex align-items-center justify-content-center mb-3" style="font-size: 30px; color: #F96D00;">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@allegiancehiring.com">info@allegiancehiring.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center bg-light shadow-sm" style="border-radius: 8px; width: 100%;">
+          		<div class="icon d-flex align-items-center justify-content-center mb-3" style="font-size: 30px; color: #F96D00;">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Website</h3>
+	            <p><a href="{{ url_for('index') }}">allegiancehiring.com</a></p>
+	          </div>
+          </div>
+        </div>
+
+        <div class="row block-9 justify-content-center">
+          
+          <div class="col-md-6 order-md-last d-flex ftco-animate">
+            
+            <form action="{{ url_for('contact') }}" method="POST" class="bg-light p-5 contact-form shadow-sm" style="border-radius: 8px; width: 100%;">
+              
+              {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                  {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} mb-4" style="border-radius: 5px;">{{ message }}</div>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-6 d-flex flex-column ftco-animate">
+  
+  <div class="w-100 mb-4" style="flex: 1; display: flex; flex-direction: column;">
+    <h4 class="mb-2" style="font-size: 18px; color: #333; font-weight: 600;">Corporate Office</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8758213257993!2d78.51450887493432!3d17.369707383514502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9859ba0e2391%3A0x724417e1f56f2b3!2siMagine%20Vijetha%20Golden%20Empire%20(Apple%20Authorised%20Reseller)%2C%20Telangana!5e0!3m2!1sen!2sin!4v1776413487645!5m2!1sen!2sin"style="border:0; width: 100%; flex: 1; min-height: 250px; border-radius: 8px; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+  <div class="w-100" style="flex: 1; display: flex; flex-direction: column;">
+    <h4 class="mb-2" style="font-size: 18px; color: #333; font-weight: 600;">Branch Office</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.4124970420797!2d78.4026364!3d17.4332578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91461427c3d7%3A0xc6c761e05a8f47c3!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            style="border:0; width: 100%; flex: 1; min-height: 250px; border-radius: 8px; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</div>
+          
+        </div>
+    </section>
+{% endblock %}

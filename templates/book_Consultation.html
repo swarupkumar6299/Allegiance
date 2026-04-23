@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
+        .contact-info-wrap { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: rgba(255,255,255,0.8); }
+        .contact-icon { color: #F96D00; font-size: 24px; min-width: 40px; }
+    </style>
+
+    <!-- Hero Banner -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Book a Consultation</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Consultation <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="row no-gutters shadow-sm hover-lift" style="border-radius: 12px; overflow: hidden;">
+              
+              <!-- LEFT SIDE: The Form -->
+              <div class="col-lg-8 col-md-7 bg-white p-5 d-flex align-items-stretch">
+                <div class="w-100">
+                  <h3 class="mb-4" style="font-weight: 800; color: #1e293b;">Secure Your Spot</h3>
+                  <p class="text-muted mb-4">Fill out your details below and an immigration expert will reach out to you within 24 hours.</p>
+                  
+                  <!-- Form connects to the Python backend -->
+                  <form action="{{ url_for('book_consultation') }}" method="POST" class="contactForm">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="first_name" style="font-size: 13px; font-weight: 600; color: #64748b;">FIRST NAME</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="John" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="last_name" style="font-size: 13px; font-weight: 600; color: #64748b;">LAST NAME</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Doe" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="phone" style="font-size: 13px; font-weight: 600; color: #64748b;">PHONE NUMBER</label>
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="+91 9888697888" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="destination" style="font-size: 13px; font-weight: 600; color: #64748b;">DESTINATION</label>
+                        <select class="form-control" name="destination" id="destination" required style="height: 52px;">
+                          <option value="">Select Country</option>
+                          <option value="usa">USA</option>
+                          <option value="uk">UK</option>
+                          <option value="canada">Canada</option>
+                          <option value="australia">Australia</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="col-md-12 mb-4">
+                        <label for="message" style="font-size: 13px; font-weight: 600; color: #64748b;">YOUR MESSAGE</label>
+                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Tell us about your immigration goals..." required></textarea>
+                      </div>
+                      <div class="col-md-12">
+                        <input type="submit" value="Submit Request" class="btn btn-primary py-3 w-100" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+              <!-- RIGHT SIDE: Contact Info -->
+              <div class="col-lg-4 col-md-5 d-flex align-items-stretch contact-info-wrap p-5">
+                <div class="w-100">
+                  <h3 class="mb-4" style="color: #fff; font-weight: 800;">Contact Us</h3>
+                  <p class="mb-5">Need immediate assistance? Reach out to our team directly.</p>
+                  
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="contact-icon"><span class="ion-ios-pin"></span></div>
+                    <div>
+                      <span style="display: block; font-size: 12px; color: #94a3b8; text-transform: uppercase;">Office</span>
+                      <span style="color: white; font-weight: 600;">123 Global Way, City, Country</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="contact-icon"><span class="ion-ios-call"></span></div>
+                    <div>
+                      <span style="display: block; font-size: 12px; color: #94a3b8; text-transform: uppercase;">Phone</span>
+                      <a href="tel://+919888697888" style="color: white; font-weight: 600;">+91 9888697888</a>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center">
+                    <div class="contact-icon"><span class="ion-ios-mail"></span></div>
+                    <div>
+                      <span style="display: block; font-size: 12px; color: #94a3b8; text-transform: uppercase;">Email</span>
+                      <a href="mailto:info@youragency.com" style="color: white; font-weight: 600;">info@youragency.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

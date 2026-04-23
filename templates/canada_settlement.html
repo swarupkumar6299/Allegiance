@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .premium-gradient-text { background: linear-gradient(90deg, #1e293b, #F96D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .hover-lift { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
+        .float-anim { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .pathway-card { border-radius: 12px; border-left: 5px solid #F96D00; background: #ffffff; transition: all 0.3s ease; }
+        .pathway-card:hover { border-left: 10px solid #1e293b; background: #f8fafc; }
+    </style>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in Canada</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Canada PR <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Express Entry & PNP</span>
+            <h2 class="mb-4 premium-gradient-text" style="font-size: 34px;">Build Your Legacy in Canada</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Canada is actively seeking skilled professionals to join its booming economy. With one of the most transparent, point-based immigration systems in the world, Canada offers unparalleled opportunities for career advancement and a world-class standard of living for you and your family.</p>
+            
+            <div class="my-5 hover-lift" style="border-radius: 12px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='images/canada-girl.avif') }}" alt="Work in Canada" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid w-100" style="max-height: 380px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Immigration Pathways</h3>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">1. Express Entry System</h5>
+                    <p class="text-muted small mb-0">The fastest pathway to Permanent Residency (PR). We optimize your Comprehensive Ranking System (CRS) score to secure your Invitation to Apply (ITA) under the Federal Skilled Worker Program (FSWP) or Canadian Experience Class (CEC).</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">2. Provincial Nominee Programs (PNP)</h5>
+                    <p class="text-muted small mb-0">Provinces like Ontario (OINP) and British Columbia (BC PNP) nominate candidates based on local labor needs. A nomination practically guarantees PR by adding 600 points to your Express Entry profile.</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">3. Global Talent Stream</h5>
+                    <p class="text-muted small mb-0">An expedited work permit process designed for highly skilled tech professionals, allowing you to start working in Canada in as little as two weeks while your PR processes.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Professionals Choose Canada</h3>
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-briefcase"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Thriving Job Market</h5>
+                            <p class="text-muted small mb-0">Massive demand in IT, Engineering, and Healthcare with highly competitive salaries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family Sponsorship</h5>
+                            <p class="text-muted small mb-0">Your spouse receives an open work permit, and children get access to free public education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center hover-lift" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3 float-anim" style="font-size: 50px; color: #F96D00;"><span class="icon-file-text-o"></span></div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Free CRS Assessment</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your work experience qualifies you for the Express Entry pool. Get your precise CRS score today.</p>
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Evaluate My Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

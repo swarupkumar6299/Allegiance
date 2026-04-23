@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800;">Study Abroad Programs</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Student Visa <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading">Your Academic Journey Starts Here</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Unlock Global Education Opportunities</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Studying abroad is more than just an education; it’s a life-changing experience. We help you navigate the entire journey—from choosing the right university in the USA, UK, Canada, or Australia, to securing your visa and finding accommodation.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/bg_2.jpg') }}" alt="Student Life" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 400px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Our 4-Step Success Process</h3>
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="feature-item d-flex align-items-center mb-3 p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3"><strong>1</strong></div>
+                        <div><h6 class="mb-0"><strong>Profile Evaluation:</strong> We analyze your academic history and career goals.</h6></div>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-3 p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3"><strong>2</strong></div>
+                        <div><h6 class="mb-0"><strong>University Selection:</strong> Applying to top-tier institutions that fit your budget.</h6></div>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-3 p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3"><strong>3</strong></div>
+                        <div><h6 class="mb-0"><strong>Visa Documentation:</strong> Expert guidance on SOPs, LORs, and financial proof.</h6></div>
+                    </div>
+                    <div class="feature-item d-flex align-items-center mb-3 p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3"><strong>4</strong></div>
+                        <div><h6 class="mb-0"><strong>Pre-Departure Briefing:</strong> Helping you prepare for life in a new country.</h6></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Study Abroad?</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 bg-white shadow-sm" style="border-radius: 12px; border-left: 5px solid #F96D00;">
+                        <h5 style="font-weight: 700;">Global Networking</h5>
+                        <p class="small text-muted mb-0">Build a network of friends and mentors from across the globe.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 bg-white shadow-sm" style="border-radius: 12px; border-left: 5px solid #F96D00;">
+                        <h5 style="font-weight: 700;">Work While Studying</h5>
+                        <p class="small text-muted mb-0">Most countries allow students to work 20 hours/week part-time.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="flaticon-graduation-cap"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Free Counseling</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Confused about which country to choose? Our expert counselors are here to guide you for free.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Apply Now</a>
+              <p class="mt-3 mb-0"><strong>Call us:</strong> <br> <a href="tel://+919888697888" style="color: #F96D00;">+91 9888697888</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+{% endblock %}

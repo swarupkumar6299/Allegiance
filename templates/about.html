@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/visa.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">About Us</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">About Us <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-lg-6 mb-5 mb-lg-0 ftco-animate">
+            <div class="premium-about-img-wrap">
+              <img src="{{ url_for('static', filename='images/bg_2.jpg') }}" alt="About Allegience" class="img-fluid rounded-premium shadow-lg w-100" style="min-height: 450px; object-fit: cover;">
+              
+              <div class="experience-badge floating-anim shadow-lg">
+                <span class="years">10+</span>
+                <span class="text">Years of<br>Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 pl-lg-5 ftco-animate">
+            <span class="premium-subheading">Welcome to Allegience</span>
+            <h2 class="premium-heading mb-4">Your Trusted Partner in Global Education</h2>
+            <p class="text-muted mb-4" style="font-size: 16px; line-height: 1.8;">At Allegience, we are dedicated to helping students achieve their dreams of studying abroad. With years of experience in the international education sector, we provide expert guidance for university admissions, visa processing, and scholarships.</p>
+            
+            <div class="premium-feature-list mt-5">
+                <div class="feature-item d-flex mb-4 align-items-center">
+                    <div class="icon-pulse mr-4"><span class="icon-check"></span></div>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-dark">Expert Career Counseling</h5>
+                        <p class="mb-0 text-muted small">Tailored guidance to help you choose the perfect educational path.</p>
+                    </div>
+                </div>
+                <div class="feature-item d-flex mb-4 align-items-center">
+                    <div class="icon-pulse mr-4"><span class="icon-check"></span></div>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-dark">High Visa Success Rate</h5>
+                        <p class="mb-0 text-muted small">Flawless documentation support ensuring maximum approval rates.</p>
+                    </div>
+                </div>
+                <div class="feature-item d-flex align-items-center">
+                    <div class="icon-pulse mr-4"><span class="icon-check"></span></div>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-dark">Pre & Post Departure Support</h5>
+                        <p class="mb-0 text-muted small">We stay with you every step of the way, so you never feel lost.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section pt-0 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-md-5 ftco-animate mb-4">
+                    <div class="hover-lift-card h-100">
+                        <div class="card-icon-wrapper mb-4"><span class="flaticon-graduation-cap"></span></div>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">To empower students with the right knowledge, resources, and support to pursue their higher education in world-class institutions globally, ensuring a smooth transition to studying abroad.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-5 ftco-animate mb-4">
+                    <div class="hover-lift-card h-100">
+                        <div class="card-icon-wrapper mb-4"><span class="flaticon-university"></span></div>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">To be the most trusted and preferred overseas education consultant, transforming the lives and careers of students worldwide by connecting them with global opportunities.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-intro ftco-no-pb img" style="background-image: url('{{ url_for('static', filename='images/visa.jpg') }}'); background-position: center center;">
+      <div class="overlay" style="background: linear-gradient(135deg, rgba(249, 109, 0, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-8 d-flex align-items-center heading-section heading-section-white ftco-animate pb-5">
+            <h2 class="mb-3 mb-md-0" style="font-weight: 700;">Ready to start your journey with us?</h2>
+          </div>
+          <div class="col-lg-3 col-md-4 ftco-animate pb-5 d-flex align-items-center">
+            <p class="mb-0 w-100"><a href="{{ url_for('contact') }}" class="btn btn-white btn-outline-white py-3 px-4 w-100 shadow-sm" style="border-radius: 30px; font-weight: 600; text-transform: uppercase;">Contact Us</a></p>
+          </div>
+        </div>  
+      </div>
+    </section>
+{% endblock %}

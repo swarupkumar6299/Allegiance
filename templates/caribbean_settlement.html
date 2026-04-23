@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .premium-gradient-text {
+            background: linear-gradient(90deg, #1e293b, #F96D00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+        }
+        .float-anim {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .pathway-card {
+            border-radius: 12px;
+            border-left: 5px solid #F96D00;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .pathway-card:hover {
+            border-left: 10px solid #1e293b;
+            background: #f8fafc;
+        }
+    </style>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Caribbean Citizenship</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Citizenship by Investment <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Second Passport Programs</span>
+            <h2 class="mb-4 premium-gradient-text" style="font-size: 34px;">Unlock Unrestricted Global Mobility</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">For high-net-worth individuals, a Caribbean passport is the ultimate tool for global freedom, wealth preservation, and security. Through government-approved Citizenship by Investment (CBI) programs, you and your family can legally acquire a powerful second passport in just a few months, without ever needing to relocate.</p>
+            
+            <div class="my-5 hover-lift" style="border-radius: 12px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='images/caribbean-luxury.avif') }}" alt="Caribbean Citizenship" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid w-100" style="max-height: 380px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Investment Pathways</h3>
+            <p class="text-muted mb-4">Caribbean nations offer straightforward, legally enshrined pathways to citizenship. We help you choose the route that best suits your financial goals:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">1. National Development Fund (Donation)</h5>
+                    <p class="text-muted small mb-0">The most straightforward and cost-effective route, especially for single applicants. You make a one-time, non-refundable economic contribution to the host country's government fund (starting at $100,000 depending on the country).</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">2. Approved Real Estate Investment</h5>
+                    <p class="text-muted small mb-0">Invest in government-approved luxury real estate, such as a resort share or private villa. This is a recoverable investment—you can sell the property after a mandatory holding period (usually 5-7 years) while keeping your citizenship for life.</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">3. Enterprise & Business Investment</h5>
+                    <p class="text-muted small mb-0">Select countries allow you to invest directly into approved local businesses or government enterprise projects, stimulating the local economy in exchange for fast-tracked passports for your entire family.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Investors Choose the Caribbean</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-plane"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Visa-Free Travel</h5>
+                            <p class="text-muted small mb-0">Access 140+ countries without a visa, including the UK, the European Schengen Area, Hong Kong, and Singapore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-line-chart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Tax Optimization</h5>
+                            <p class="text-muted small mb-0">Highly favorable tax regimes. Many Caribbean nations have zero tax on global income, wealth, capital gains, or inheritance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-hourglass-half"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Speed & Simplicity</h5>
+                            <p class="text-muted small mb-0">Fast-track processing times. Obtain your passport in 3 to 6 months with zero physical residency requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family Security</h5>
+                            <p class="text-muted small mb-0">Include your spouse, dependent children, and even dependent parents or siblings on a single application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center hover-lift" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3 float-anim" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-shield"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Private Consultation</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Speak with our CBI experts to determine the most cost-effective and powerful passport for your specific global needs.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Request Callback</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0 hover-lift">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top CBI Nations</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>St. Kitts & Nevis:</strong> The Platinum Standard</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Grenada:</strong> USA E-2 Visa Treaty Access</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Antigua & Barbuda:</strong> Best for Families</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Dominica:</strong> Highly Cost-Effective</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>St. Lucia:</strong> Fast & Efficient Processing</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4 premium-gradient-text">Your Path to a Second Passport</h2>
+            <p class="text-muted">We handle the entire end-to-end legal process, ensuring strict confidentiality and compliance with government Citizenship by Investment Units (CIU).</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">01</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Pre-Approval</h4>
+              <p class="text-muted small">We conduct strict internal due diligence to guarantee your eligibility before any government fees are paid.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">02</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">File Submission</h4>
+              <p class="text-muted small">Our legal team prepares your comprehensive dossier and submits it directly to the government's CBI unit.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">03</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Make Investment</h4>
+              <p class="text-muted small">Once the government issues your formal Approval-in-Principle letter, you fulfill your donation or real estate investment.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">04</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Passport Issuance</h4>
+              <p class="text-muted small">Certificates of Registration and Passports are issued and securely couriered to you anywhere in the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4 premium-gradient-text">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Do I ever need to visit or live in the Caribbean?</h5>
+                <p class="text-muted small mb-0">For the vast majority of Caribbean CBI programs (like St. Kitts, St. Lucia, and Grenada), there is absolutely no requirement to visit the country before, during, or after the application process. The only exception is Antigua & Barbuda, which requires a brief 5-day visit within your first 5 years of citizenship.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> How does Grenada help me get into the USA?</h5>
+                <p class="text-muted small mb-0">Grenada is the only Caribbean CBI nation that holds an E-2 Investor Visa treaty with the United States. Once you obtain Grenadian citizenship, you become eligible to apply for the US E-2 visa, allowing you to live and run a business in the United States.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Is this citizenship for life?</h5>
+                <p class="text-muted small mb-0">Yes. Once granted, citizenship is irrevocable (provided your application was truthful and investment maintained per the law). It is granted for life and can be passed down to future generations by descent.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Secure Your Global Freedom Today</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Get a confidential quote tailored to your family size and investment preferences.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3 hover-lift" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Request a Private Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

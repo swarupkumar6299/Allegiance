@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/visa.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in Canada</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Canada Immigration <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Express Entry & PNP</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Build Your Career & Future in Canada</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Canada is actively seeking skilled professionals to join its booming economy. With one of the most welcoming, transparent, and point-based immigration systems in the world, Canada offers unparalleled opportunities for career advancement, high earning potential, and a world-class standard of living for you and your family.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/canada-family.avif') }}" alt="Work in Canada" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Immigration Pathways</h3>
+            <p class="text-muted mb-4">We specialize in navigating the complexities of Canadian immigration. Based on your work experience and profile, we will target the fastest route to your Permanent Residency (PR).</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">1. Express Entry System</h5>
+                    <p class="text-muted small mb-0">The fastest and most popular pathway. It manages applications for the Federal Skilled Worker Program (FSWP), Federal Skilled Trades Program (FSTP), and Canadian Experience Class (CEC). We help optimize your Comprehensive Ranking System (CRS) score to secure your Invitation to Apply (ITA).</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">2. Provincial Nominee Programs (PNP)</h5>
+                    <p class="text-muted small mb-0">Provinces like Ontario (OINP), British Columbia (BC PNP), and Alberta nominate candidates based on local labor market needs. A provincial nomination practically guarantees your PR by adding 600 points to your Express Entry profile.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">3. Global Talent Stream (Tech Workers)</h5>
+                    <p class="text-muted small mb-0">An expedited work permit process designed for highly skilled tech professionals, allowing you to start working in Canada in as little as two weeks while your PR processes.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Professionals Choose Canada</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-briefcase"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Thriving Job Market</h5>
+                            <p class="text-muted small mb-0">Massive demand in IT, Engineering, Healthcare, and Finance with highly competitive salaries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family Sponsorship</h5>
+                            <p class="text-muted small mb-0">Your spouse receives an open work permit, and children get access to free public education.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-heart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Universal Healthcare</h5>
+                            <p class="text-muted small mb-0">Access to free, world-class medical and healthcare facilities for permanent residents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-globe"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Powerful Passport</h5>
+                            <p class="text-muted small mb-0">A clear, 3-year pathway to Canadian citizenship and one of the strongest passports globally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Free CRS Profile Assessment</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your work experience and education qualify you for the Express Entry pool. Get a precise calculation of your CRS score today.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Evaluate My Profile</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top In-Demand Sectors</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Software & IT Services</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Healthcare & Nursing</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Civil & Mechanical Engineering</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Finance & Accounting</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Skilled Trades</li>
+                </ul>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Your Journey to Canadian PR</h2>
+            <p class="text-muted">We simplify the complex immigration process into four clear, manageable steps.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">01</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Profile Evaluation</h4>
+              <p class="text-muted small">We assess your age, education, work experience, and language skills to calculate your CRS score and identify the best visa pathway.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">02</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Documentation & ECA</h4>
+              <p class="text-muted small">We guide you through obtaining your Educational Credential Assessment (ECA) and preparing all necessary legal and financial documents.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">03</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Express Entry Pool</h4>
+              <p class="text-muted small">We create and submit an optimized Express Entry profile to maximize your chances of receiving an Invitation to Apply (ITA).</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">04</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Visa Filing & Settlement</h4>
+              <p class="text-muted small">Once the ITA is received, we file your final PR application and provide post-landing support to help you settle in Canada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> How long does the Express Entry process take?</h5>
+                <p class="text-muted small mb-0">Once your profile is submitted and you receive an Invitation to Apply (ITA), the standard processing time by Immigration, Refugees and Citizenship Canada (IRCC) is typically 6 to 8 months.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Do I need a job offer to get Canada PR?</h5>
+                <p class="text-muted small mb-0">No, a job offer is not mandatory for the Federal Skilled Worker Program under Express Entry. However, having a valid job offer can significantly boost your CRS score and fast-track your application.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Can I include my family in my PR application?</h5>
+                <p class="text-muted small mb-0">Yes! You can include your spouse or common-law partner and dependent children under the age of 22 in your permanent residency application.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Start Your Canadian Dream?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Our RCIC-certified experts are ready to evaluate your profile and map out your fastest route to Permanent Residency.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Book Your Free Assessment Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

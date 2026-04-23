@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Germany Job Seeker</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Germany <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Opportunity Card (Chancenkarte)</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Why Apply for the Germany Job Seeker Visa?</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Germany is Europe's economic powerhouse, facing a massive shortage of skilled professionals in IT, engineering, healthcare, and management. With the newly introduced points-based "Chancenkarte" (Opportunity Card), you can live in Germany for up to one year to search for employment, attend interviews, and secure your future—no initial job offer required.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/germany-boy.avif') }}" alt="Germany Job Seeker" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">How the Chancenkarte Works</h3>
+            <p class="text-muted mb-4">To qualify for the new Job Seeker visa, you must score a minimum of 6 points based on the following criteria:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">Degree Recognition (Base Requirement)</h5>
+                    <p class="text-muted small mb-0">You must have a university degree or at least two years of vocational training that is recognized in your home country. We verify this through the Anabin database.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">Professional Experience (Up to 3 Points)</h5>
+                    <p class="text-muted small mb-0">Points are awarded based on how many years of relevant professional experience you have gained in the last 5-7 years.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">Language Skills (Up to 4 Points)</h5>
+                    <p class="text-muted small mb-0">You earn points for German proficiency (A1 to C1) or English proficiency (B2 or higher).</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Benefits of Moving to Germany</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-briefcase"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Part-Time Work Rights</h5>
+                            <p class="text-muted small mb-0">The new rules allow you to work up to 20 hours per week while looking for a full-time job.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-star"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Pathway to Blue Card</h5>
+                            <p class="text-muted small mb-0">Easily convert your visa into an EU Blue Card once you secure a qualifying employment contract.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-heart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Work-Life Balance</h5>
+                            <p class="text-muted small mb-0">Enjoy minimum 24 paid vacation days and fantastic social security benefits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-globe"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Schengen Access</h5>
+                            <p class="text-muted small mb-0">Travel freely across all 27 Schengen countries for interviews and networking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Check Eligibility</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your degree is recognized and if you meet the minimum 6 points for the Opportunity Card.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Book Free Consultation</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top Shortage Occupations</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Software Developers & IT</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Mechanical & Electrical Engineers</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Healthcare Workers & Nurses</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Data Scientists</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Finance & Accounting</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Your Journey to Germany</h2>
+            <p class="text-muted">We handle the complex German bureaucracy so you can focus on preparing for your job search.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">01</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Points Assessment</h4>
+              <p class="text-muted small">We evaluate your profile against the Chancenkarte criteria and verify your degree on the Anabin database.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">02</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Blocked Account Setup</h4>
+              <p class="text-muted small">We guide you in opening a German Blocked Account (Sperrkonto) to prove you have the required funds to support yourself.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">03</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Visa Interview</h4>
+              <p class="text-muted small">We prepare your dossier and help you book and prepare for your appointment at the German Consulate/VFS.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">04</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Arrival & Transition</h4>
+              <p class="text-muted small">Once you secure a job in Germany, we assist you in converting your Job Seeker visa into a permanent EU Blue Card.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Do I need to speak German?</h5>
+                <p class="text-muted small mb-0">No, fluent German is not strictly required if you speak B2 level English and are applying for IT or corporate roles. However, knowing basic German (A1/A2) will earn you valuable points for the visa and make daily life easier.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> How much money do I need in the Blocked Account?</h5>
+                <p class="text-muted small mb-0">The German government requires you to prove you can support yourself. Currently, you need to deposit approximately €1,027 per month for the duration of your visa (e.g., about €12,324 for a 12-month stay).</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Can I work part-time while looking for a job?</h5>
+                <p class="text-muted small mb-0">Yes! A major advantage of the new Chancenkarte is that it allows you to work up to 20 hours per week in any job (even outside your profession) to support yourself while you search for a qualified full-time role.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Start Your German Career?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Speak with our experts to calculate your points, check your degree recognition, and start your Chancenkarte application.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Calculate Your Points Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

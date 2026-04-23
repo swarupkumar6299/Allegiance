@@ -1,0 +1,472 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  .animated-airplane-container {
+    position: absolute;
+    /* Start the plane roughly in the middle so it has room to climb and descend */
+    top: 40%; 
+    left: -150px; 
+    width: 120px !important;
+    pointer-events: none;
+    z-index: 1;
+    /* Changed the animation name and set it to 15 seconds */
+    animation: takeoffToLanding 15s ease-in-out infinite; 
+  }
+
+  @keyframes takeoffToLanding {
+    /* 1. START & TAXI: On the ground, moving forward */
+    0% { transform: translateX(0vw) translateY(100px) rotate(0deg); }
+    
+    /* 2. LIFTOFF: Nose pitches up (-15deg), starts gaining height */
+    15% { transform: translateX(15vw) translateY(80px) rotate(-15deg); }
+    
+    /* 3. CLIMBING: Still angled up, gaining a lot of height (negative Y is UP) */
+    30% { transform: translateX(30vw) translateY(-60px) rotate(-5deg); }
+    
+    /* 4. CRUISING: Reaches peak height, perfectly level (0deg) */
+    50% { transform: translateX(50vw) translateY(-80px) rotate(0deg); }
+    
+    /* 5. DESCENT: Nose pitches down (10deg), starts losing height */
+    70% { transform: translateX(70vw) translateY(-20px) rotate(10deg); }
+    
+    /* 6. TOUCHDOWN: Leveled out, back on the "ground" (+100px) */
+    85% { transform: translateX(85vw) translateY(100px) rotate(0deg); }
+    
+    /* 7. ROLLOUT: Rolling safely off the right side of the screen */
+    100% { transform: translateX(120vw) translateY(100px) rotate(0deg); }
+  }
+</style>    
+
+    <section class="home-slider owl-carousel">
+      
+      <div class="slider-item" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}'); position: relative; overflow: hidden;">
+        
+        <img src="{{ url_for('static', filename='images/airplane-svgrepo-com.svg') }}" class="animated-airplane-container" alt="Flying Plane" style="width: 120px !important; z-index: 1;">
+        
+        <div class="overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate">
+              <span class="subheading">Welcome to Aligence</span>
+              <h1 class="mb-4">Secure Your Global Career & Future</h1>
+              <p><a href="{{ url_for('services') }}" class="btn btn-primary px-4 py-3 mt-3">Explore Work Visas</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url('{{ url_for('static', filename='images/AI.avif') }}'); position: relative; overflow: hidden;">
+        
+        <img src="{{ url_for('static', filename='images/airplane-svgrepo-com.svg') }}" class="animated-airplane-container" alt="Flying Plane" style="width: 120px !important; z-index: 1;">
+        
+        <div class="overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate">
+              <span class="subheading">Welcome to Aligence</span>
+              <h1 class="mb-4">Secure Your Global Career & Future</h1>
+              <p><a href="{{ url_for('services') }}" class="btn btn-primary px-4 py-3 mt-3">Explore Work Visas</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url('{{ url_for('static', filename='images/world-visa.jpg') }}'); position: relative; overflow: hidden;">
+        
+        <img src="{{ url_for('static', filename='images/airplane-svgrepo-com.svg') }}" class="animated-airplane-container" alt="Flying Plane" style="width: 120px !important; z-index: 1;">
+        
+        <div class="overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate">
+              <span class="subheading">Your Trusted Settlement Partner</span>
+              <h1 class="mb-4">Work and Settle in Top Destinations Worldwide</h1>
+              <p><a href="{{ url_for('contact') }}" class="btn btn-primary px-4 py-3 mt-3">Book Free Consultation</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+    <section class="ftco-section pt-5 pb-5 border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Global Reach</span>
+            <h3 class="mb-5" style="font-weight: 700; color: #333;">Destinations We Cover</h3>
+            
+            <div class="scrolling-wrapper">
+              <div class="scrolling-content">
+                
+                {% set destinations = [
+                    ('australia.png', 'Australia'), 
+                    ('canada.png', 'Canada'), 
+                    ('france.png', 'France'), 
+                    ('germany.png', 'Germany'), 
+                    ('italy.png', 'Italy'), 
+                    ('united-kingdom.png', 'UK'),
+                    ('brazil.png', 'Brazil'),
+                    ('denmark.png', 'Denmark'),
+                    ('european.png', 'European'),
+                    ('singapore.png', 'Singapore'),
+                    ('russia.png', 'Russia')
+                ] %}
+                
+                {# First set of flags #}
+                {% for flag, name in destinations %}
+                <div class="destination-badge mx-3 my-3 text-center">
+                  <div class="flag-img-wrap mb-2">
+                    <img src="{{ url_for('static', filename='images/flags/' ~ flag) }}" alt="{{ name }}">
+                  </div>
+                  <span class="country-label">{{ name }}</span>
+                </div>
+                {% endfor %}
+
+                {# Second set of flags (Creates the seamless loop!) #}
+                {% for flag, name in destinations %}
+                <div class="destination-badge mx-3 my-3 text-center">
+                  <div class="flag-img-wrap mb-2">
+                    <img src="{{ url_for('static', filename='images/flags/' ~ flag) }}" alt="{{ name }}">
+                  </div>
+                  <span class="country-label">{{ name }}</span>
+                </div>
+                {% endfor %}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+<div class="row">
+          
+  <div class="col-lg-one-fifth col-md-4 d-flex ftco-animate mb-4">
+    <div class="premium-country-card w-100">
+      <img src="{{ url_for('static', filename='images/usa.avif') }}" alt="Work in USA" class="country-bg-img">
+      <div class="card-overlay">
+        <h4>Work & Settle in USA</h4>
+        <p>Thriving tech hubs, diverse industries, and unmatched career opportunities.</p>
+        <a href="{{ url_for('usa_settlement') }}" class="explore-link">Explore Opportunities <i class="ion-ios-arrow-round-forward"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-one-fifth col-md-4 d-flex ftco-animate mb-4">
+    <div class="premium-country-card w-100">
+      <img src="{{ url_for('static', filename='images/uk.avif') }}" alt="Work in UK" class="country-bg-img">
+      <div class="card-overlay">
+        <h4>Work & Settle in UK</h4>
+        <p>Strong economy, healthcare opportunities, and clear pathways to residency.</p>
+        <a href="{{ url_for('uk_settlement') }}" class="explore-link">Explore Opportunities <i class="ion-ios-arrow-round-forward"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-one-fifth col-md-4 d-flex ftco-animate mb-4">
+    <div class="premium-country-card w-100">
+      <img src="{{ url_for('static', filename='images/canada.avif') }}" alt="Work in Canada" class="country-bg-img">
+      <div class="card-overlay">
+        <h4>Work & Settle in Canada</h4>
+        <p>Welcoming immigration policies, high quality of life, and excellent PR pathways.</p>
+        <a href="{{ url_for('canada') }}" class="explore-link">Explore Opportunities <i class="ion-ios-arrow-round-forward"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-one-fifth col-md-4 d-flex ftco-animate mb-4">
+    <div class="premium-country-card w-100">
+      <img src="{{ url_for('static', filename='images/australia.avif') }}" alt="Work in Australia" class="country-bg-img">
+      <div class="card-overlay">
+        <h4>Work & Settle in Australia</h4>
+        <p>Great work-life balance, skilled visa options, and high earning potential.</p>
+        <a href="{{ url_for('australia_settlement') }}" class="explore-link">Explore Opportunities <i class="ion-ios-arrow-round-forward"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-one-fifth col-md-4 d-flex ftco-animate mb-4">
+    <div class="premium-country-card w-100">
+      <img src="{{ url_for('static', filename='images/europe.jpg') }}" alt="Work in Europe" class="country-bg-img">
+      <div class="card-overlay">
+        <h4>Work & Settle in Europe</h4>
+        <p>Access 27 countries with the EU Blue Card and enjoy world-class healthcare.</p>
+        <a href="{{ url_for('europe_settlement') }}" class="explore-link">Explore Opportunities <i class="ion-ios-arrow-round-forward"></i></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <section class="ftco-intro ftco-no-pb img" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}')">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0">You Always Get the Best Guidance</h2>
+          </div>
+          <div class="col-lg-3 col-md-4 ftco-animate">
+          </div>
+        </div>	
+      </div>
+    </section>
+
+
+
+    <section class="ftco-counter" id="section-counter">
+      <div class="container">
+        <div class="row d-md-flex align-items-center justify-content-center">
+          <div class="wrapper">
+            <div class="row d-md-flex align-items-center">
+              
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-briefcase"></span></div>
+                  <div class="text">
+                    <strong class="number" data-number="1200">0</strong>
+                    <span>Successful Settlements</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-building"></span></div>
+                  <div class="text">
+                    <strong class="number" data-number="150">0</strong>
+                    <span>Corporate Partners</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="icon"><span class="flaticon-passport"></span></div>
+                  <div class="text">
+                    <strong class="number" data-number="95">0</strong>
+                    <span>Visa Success Rate (%)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  
+                  <div class="text">
+                    <strong class="number" data-number="10">0</strong>
+                    <span>Years of Experience</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb">
+      <div class="container-fluid px-0">
+        <div class="row no-gutters justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-4">Services</h2>
+            <p>We specialize in providing end-to-end immigration, work permit, and settlement solutions. Explore the top pathways our clients have successfully used to build their careers globally.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/toront.jpeg') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Canada Express Entry</a></h3><span>Permanent Residency</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/melbourne.avif') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Skilled Migration Visa</a></h3><span>Australia</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/oxford.avif') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Skilled Worker Visa</a></h3><span>United Kingdom</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/california.avif') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Employment-Based Visas</a></h3><span>USA</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/mcgill.jpg') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Provincial Nominee (PNP)</a></h3><span>Canada</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/sydney.avif') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Employer Sponsored Visas</a></h3><span>Australia</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/london.jpg') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Global Talent Visa</a></h3><span>United Kingdom</span></div></div></div>
+          <div class="col-md-3"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ url_for('static', filename='images/new_york.avif') }}');"><div class="overlay"></div><div class="text text-center p-4"><h3><a href="#">Corporate Immigration</a></h3><span>USA</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-md-6 py-5 px-md-5">
+            <div class="py-md-5">
+              <div class="heading-section heading-section-white ftco-animate mb-5">
+                <h2 class="mb-4">Book a Free Settlement Consultation</h2>
+                <p>Ready to advance your career globally? Our immigration experts will guide you in choosing the right country and visa pathway to secure your future abroad.</p>
+              </div>
+              <!-- Added method="POST" and action to point to a new Python route -->
+<form action="{{ url_for('book_consultation') }}" method="POST" class="appointment-form ftco-animate">
+  <div class="d-md-flex">
+    <!-- Added name="first_name" -->
+    <div class="form-group"><input type="text" name="first_name" class="form-control" placeholder="First Name" required></div>
+    <!-- Added name="last_name" -->
+    <div class="form-group ml-md-4"><input type="text" name="last_name" class="form-control" placeholder="Last Name" required></div>
+  </div>
+  <div class="d-md-flex">
+    <div class="form-group">
+      <div class="form-field">
+        <div class="select-wrap">
+          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+          <select class="form-control" name="destination" required>
+            <option value="">Preferred Destination</option>
+            <option value="usa">Work & Settle in USA</option>
+            <option value="uk">Work & Settle in UK</option>
+            <option value="canada">Work & Settle in Canada</option>
+            <option value="australia">Work & Settle in Australia</option>
+            <option value="other">Other Destinations</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Added name="phone" -->
+    <div class="form-group ml-md-4"><input type="text" name="phone" class="form-control" placeholder="Phone Number" required></div>
+  </div>
+  <div class="d-md-flex">
+    <!-- Added name="message" -->
+    <div class="form-group"><textarea name="message" cols="30" rows="2" class="form-control" placeholder="Your Message" required></textarea></div>
+    <div class="form-group ml-md-4"><input type="submit" value="Get Free Consultation" class="btn btn-white py-3 px-4"></div>
+  </div>
+</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-testimonials">
+      <div class="container">
+        <div class="section-title text-center ftco-animate">
+          <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Testimonials</span>
+          <h2>Client Success Stories</h2>
+          <p>Real professionals achieving their global career and settlement goals.</p>
+        </div>
+        
+        <div class="testimonial-slider ftco-animate">
+          
+          <div class="testimonial-card">
+            <img src="{{ url_for('static', filename='images/person_1.jpg') }}" class="avatar" alt="Rahul Sharma">
+            <div class="stars">★★★★★</div>
+            <p class="review">“Thanks to Aligence, my Express Entry profile was selected in months. The Permanent Residency (PR) process was incredibly smooth and stress-free.”</p>
+            <h4>Rahul Sharma</h4>
+            <span>Settled in Canada (PR)</span>
+          </div>
+          
+          <div class="testimonial-card">
+            <img src="{{ url_for('static', filename='images/person_2.jpg') }}" class="avatar" alt="Ananya Patel">
+            <div class="stars">★★★★★</div>
+            <p class="review">“The consultants guided me through every single step. I successfully secured my Skilled Worker Visa and relocated my family to the UK without a hitch.”</p>
+            <h4>Ananya Patel</h4>
+            <span>Working in the UK</span>
+          </div>
+          
+          <div class="testimonial-card">
+            <img src="{{ url_for('static', filename='images/person_3.jpg') }}" class="avatar" alt="Arjun Mehta">
+            <div class="stars">★★★★★</div>
+            <p class="review">“Amazing experience! They handled all my complex skills assessment paperwork perfectly, and my Australia PR visa got approved within weeks.”</p>
+            <h4>Arjun Mehta</h4>
+            <span>Australia Skilled Migration</span>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+{% endblock %}
+		
+    <footer class="ftco-footer modern-footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <h4>Allegiance Hiring</h4>
+        <p>
+          We help professionals and families achieve their dream of settling abroad with expert
+          guidance for work permits, permanent residency, and global career transitions.
+        </p>
+
+        <div class="footer-social">
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-instagram"></i></a>
+          <a href="#"><i class="icon-linkedin"></i></a>
+          <a href="#"><i class="icon-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="#">Work & Settle in Canada</a></li>
+          <li><a href="#">Work & Settle in UK</a></li>
+          <li><a href="#">Work & Settle in Australia</a></li>
+          <li><a href="#">Work & Settle in USA</a></li>
+          <li><a href="#">Work & Settle in Germany</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Permanent Residency (PR)</a></li>
+          <li><a href="#">Work Permit Assistance</a></li>
+          <li><a href="#">Corporate Immigration</a></li>
+          <li><a href="#">Skills Assessment</a></li>
+          <li><a href="#">Post-Landing Settlement</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Contact Us</h4>
+        <p><i class="icon-map-marker"></i> 310, 3rd floor SL Jubilee complex, Road no 36, Jubilee Hills, Hyderabad, India.</p>
+        <p><i class="icon-phone"></i> +91 9888697888</p>
+        <p><i class="icon-envelope"></i> info@allegiancehiring.com</p>
+
+        <a href="/contact" class="footer-btn">Book Free Assessment</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom text-center">
+      <p>
+        © <script>document.write(new Date().getFullYear());</script>
+        Swarup❤️ . All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
+<script src="{{ url_for('static', filename='js/google-map.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Business & Investor Visas</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Business Visa <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading">Expand Your Global Footprint</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Global Opportunities for Entrepreneurs</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Business visas are designed for skilled entrepreneurs and investors who want to establish, manage, or grow a business in a foreign country. Whether you're looking at the USA E-2, Canada Start-up Visa, or Australia Business Innovation stream, we help you navigate the complex financial and legal requirements.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/bg_5.jpg') }}" alt="Business Visa" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Core Business Visa Pathways</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px;"><span class="icon-lightbulb-o"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Entrepreneurship</h5>
+                            <p class="text-muted small mb-0">For those looking to set up a new start-up or buy a franchise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px;"><span class="icon-money"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Investor Visas</h5>
+                            <p class="text-muted small mb-0">Residency through significant financial investment in the host country.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px;"><span class="icon-building"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Intra-Company Transfer</h5>
+                            <p class="text-muted small mb-0">Move senior management or specialized staff to a foreign branch.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px;"><span class="icon-globe"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Global Market Access</h5>
+                            <p class="text-muted small mb-0">Expand your existing business into new international territories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-briefcase"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Business Strategy</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Business visas require detailed business plans and proof of funds. Our corporate experts help you prepare a winning application.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Consult Corporate Team</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> Call for B2B Support</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+{% endblock %}

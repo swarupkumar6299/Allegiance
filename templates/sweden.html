@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in Sweden</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Sweden Immigration <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Work Permits & PR</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Embrace Innovation and Unmatched Work-Life Balance</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Sweden is a global leader in technology, sustainability, and workplace equality. Home to unicorns like Spotify, Klarna, and Skype, Sweden offers highly skilled professionals a flat corporate hierarchy, world-class social benefits, and a highly streamlined pathway to permanent residency and citizenship.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/sweden-work.avif') }}" alt="Work in Sweden" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Swedish Residency Pathways</h3>
+            <p class="text-muted mb-4">We specialize in navigating the requirements set by Migrationsverket (the Swedish Migration Agency) to ensure your application is processed smoothly:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">1. Swedish Work Permit (Arbetstillstånd)</h5>
+                    <p class="text-muted small mb-0">The standard route for professionals with a valid job offer from a Swedish employer. The position must offer a salary that meets the newly updated maintenance requirements and terms that match Swedish collective agreements.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">2. Job Seeker Visa for Highly Educated</h5>
+                    <p class="text-muted small mb-0">A newly introduced 9-month visa for individuals with an advanced degree (Master's or PhD). It allows you to move to Sweden to look for work or explore starting your own business without needing a prior job offer.</p>
+                </div>
+                <div class="p-4 bg-white shadow-sm mb-3" style="border-radius: 8px; border-left: 4px solid #F96D00;">
+                    <h5 style="font-weight: 700;">3. The EU Blue Card (Sweden)</h5>
+                    <p class="text-muted small mb-0">For highly qualified workers with a university degree and an employment contract offering a highly competitive salary (at least 1.5 times the average gross salary in Sweden). Offers enhanced mobility within the EU.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Professionals Choose Sweden</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-heart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Family & Parental Leave</h5>
+                            <p class="text-muted small mb-0">An incredible 480 days of paid parental leave per child, shared between parents, plus heavily subsidized childcare.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-laptop"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">The Tech Capital of Europe</h5>
+                            <p class="text-muted small mb-0">Stockholm produces the most billion-dollar tech startups per capita in Europe. Massive demand for IT and engineering talent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Spouse & Sambo Rights</h5>
+                            <p class="text-muted small mb-0">Your spouse or cohabiting partner ("sambo") can join you and immediately receives full rights to work in Sweden.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-3 bg-white shadow-sm h-100" style="border-radius: 12px;">
+                        <div class="icon-pulse mr-3" style="width: 45px; height: 45px; font-size: 18px; color: #F96D00;"><span class="icon-home"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Pathway to Permanent Residency</h5>
+                            <p class="text-muted small mb-0">Eligible for Permanent Residency (PUT) after 4 years of working, and Swedish Citizenship after 5 years.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Check Eligibility</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your profession is in demand or if you qualify for the 9-month Job Seeker Visa for highly educated professionals.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Book Free Consultation</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top Swedish Tech Hubs</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Stockholm (Startups & Fintech)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Gothenburg (Automotive & Greentech)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Malmö (Gaming & IT)</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Uppsala (Life Sciences)</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Linköping (Aviation & Engineering)</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Your Journey to Sweden</h2>
+            <p class="text-muted">Swedish immigration requires strict compliance with labor union standards. Our experts manage the bureaucracy so you can focus on relocating.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">01</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Contract & Union Approval</h4>
+              <p class="text-muted small">We ensure your job offer meets the strict salary thresholds and that your employer has obtained the required trade union approval.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">02</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Migrationsverket Filing</h4>
+              <p class="text-muted small">We file your application with the Swedish Migration Agency, prioritizing fast-track processing wherever eligible.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">03</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Biometrics & UT Card</h4>
+              <p class="text-muted small">You will visit the Swedish embassy to submit biometrics. Upon approval, your UT Card (Residence Permit Card) is issued for travel.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow-sm h-100" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 24px; font-weight: 800; color: #dee2e6;">04</div>
+              <h4 style="font-weight: 700; font-size: 18px;">Skatteverket Registration</h4>
+              <p class="text-muted small">Upon arrival, we guide you through registering with the Tax Agency (Skatteverket) to obtain your vital Personnummer and BankID.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b;">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Do I need to speak Swedish to work there?</h5>
+                <p class="text-muted small mb-0">For most tech, engineering, and international corporate roles, the working language is 100% English, and Swedes are among the best non-native English speakers in the world. However, learning Swedish is highly recommended for long-term integration and everyday society.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> What is a Personnummer and BankID?</h5>
+                <p class="text-muted small mb-0">The Personnummer is your Swedish personal identity number, issued by Skatteverket. It is required for everything: healthcare, paying taxes, opening a bank account, and getting a gym membership. BankID is your digital signature linked to your bank, which is used for all secure online logins in Sweden.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate" style="border-radius: 8px;">
+                <h5 style="font-weight: 700; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2" style="color: #F96D00;"></i> Can my unmarried partner move with me?</h5>
+                <p class="text-muted small mb-0">Yes! Swedish immigration law is very progressive. If you can prove you have lived together in a serious relationship (known as being a "sambo"), your partner can be included in your application and will receive full work rights.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Start Your Life in Sweden?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Speak with our immigration experts to evaluate your job offer, check union requirements, and start your work permit application.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Evaluate Your Profile Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

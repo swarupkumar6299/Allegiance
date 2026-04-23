@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.7);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800;">Tourist & Visitor Visas</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Tourist Visa <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading">Explore the World</span>
+            <h2 class="mb-4" style="font-weight: 800; color: #1e293b; font-size: 32px;">Seamless Travel Experiences Await</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Planning a vacation or visiting family abroad? A Tourist Visa (or Visitor Visa) is your ticket to exploring new cultures. We specialize in handling complex visa documentations for the USA (B1/B2), UK (Standard Visitor), Canada, and the Schengen zone, ensuring your travel plans stay on track.</p>
+            
+            <div class="my-5">
+                <img src="{{ url_for('static', filename='images/bg_4.jpg') }}" alt="World Travel" class="img-fluid rounded-premium shadow-sm w-100" style="max-height: 350px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Standard Document Checklist</h3>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Valid Passport (6 months+)</li>
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Proof of Financial Funds</li>
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Invitation Letter (if applicable)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Travel Itinerary & Flights</li>
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Hotel Accommodation Proof</li>
+                        <li class="mb-2"><i class="icon-check text-primary mr-2"></i> Income Tax Returns (ITR)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Popular Holiday Destinations</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="p-3 bg-white text-center shadow-sm hover-lift-card" style="border-radius: 15px;">
+                        <h6 class="font-weight-bold mb-0">USA (B1/B2)</h6>
+                        <small class="text-muted">10-Year Multiple Entry</small>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-3 bg-white text-center shadow-sm hover-lift-card" style="border-radius: 15px;">
+                        <h6 class="font-weight-bold mb-0">United Kingdom</h6>
+                        <small class="text-muted">Standard Visitor Visa</small>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-3 bg-white text-center shadow-sm hover-lift-card" style="border-radius: 15px;">
+                        <h6 class="font-weight-bold mb-0">Europe</h6>
+                        <small class="text-muted">Schengen C-Type</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mt-4" style="background: #FFF3E0; border-radius: 15px; border-left: 6px solid #F96D00;">
+                <h5 style="font-weight: 700; color: #E65100;"><i class="icon-lightbulb-o mr-2"></i> Expert Pro-Tip</h5>
+                <p class="mb-0 text-dark small">Always ensure your "Tie to Home Country" is strong. Embassies look for reasons that prove you will return home, such as a stable job, property ownership, or family commitments.</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-camera"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Start Your Trip</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Don't let a visa rejection ruin your vacation. Our experts ensure your file is 100% compliant with embassy rules.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Apply for Visa</a>
+              <div class="mt-4 p-3 bg-light rounded">
+                <h6 class="font-weight-bold mb-1">Fast Processing</h6>
+                <p class="small mb-0 text-muted">Average turnaround: 7-15 days</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+{% endblock %}

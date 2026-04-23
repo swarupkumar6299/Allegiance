@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .premium-gradient-text {
+            background: linear-gradient(90deg, #1e293b, #F96D00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+        }
+        .float-anim {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .pathway-card {
+            border-radius: 12px;
+            border-left: 5px solid #F96D00;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .pathway-card:hover {
+            border-left: 10px solid #1e293b;
+            background: #f8fafc;
+        }
+    </style>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/visa.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Settle in Asia</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Asian Residency <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">Golden Visas & Investor Programs</span>
+            <h2 class="mb-4 premium-gradient-text" style="font-size: 34px;">Unlock the Power of the East</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Asia is home to some of the world’s most dynamic economies, offering unmatched opportunities for investors, entrepreneurs, and highly skilled professionals. From zero-tax regimes to world-class safety and cutting-edge infrastructure, settling in a major Asian hub provides a premium lifestyle and unparalleled business access.</p>
+            
+            <div class="my-5 hover-lift" style="border-radius: 12px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='images/asia-hub.avif') }}" alt="Asia Residency Hubs" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid w-100" style="max-height: 380px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top Asian Residency Pathways</h3>
+            <p class="text-muted mb-4">Whether you are looking to relocate your business, invest in premium real estate, or enjoy a luxurious retirement, Asia offers tailored, fast-tracked visas:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">1. UAE (Dubai) Golden Visa</h5>
+                    <p class="text-muted small mb-0">A highly coveted 10-year renewable residency visa designed for investors, entrepreneurs, specialized talents, and outstanding students. Enjoy a 0% personal income tax environment and one of the safest luxury lifestyles in the world.</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">2. Singapore Global Investor Program (GIP) & EntrePass</h5>
+                    <p class="text-muted small mb-0">Singapore is the premier wealth hub of Asia. The GIP grants Permanent Residency to eligible global investors who intend to drive their businesses and investment growth from Singapore. The EntrePass is ideal for serial tech entrepreneurs.</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">3. Malaysia (MM2H) & Thailand Elite</h5>
+                    <p class="text-muted small mb-0">Premium, long-term visa programs perfect for digital nomads, retirees, and lifestyle investors. These programs offer 5 to 20-year multiple-entry visas, VIP fast-track airport services, and exceptional cost-of-living advantages.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Global Citizens Choose Asia</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-line-chart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Tax Optimization</h5>
+                            <p class="text-muted small mb-0">Hubs like Dubai and Singapore offer incredibly favorable tax environments, including zero or very low personal income and capital gains taxes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-shield"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Unmatched Safety</h5>
+                            <p class="text-muted small mb-0">Asian financial hubs consistently rank at the very top of global indexes for personal safety, low crime rates, and political stability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-building"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">World-Class Infrastructure</h5>
+                            <p class="text-muted small mb-0">Enjoy futuristic smart cities, top-tier international schools, and globally renowned healthcare facilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-globe"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Strategic Connectivity</h5>
+                            <p class="text-muted small mb-0">Position yourself perfectly between Eastern markets and Western time zones with unparalleled global flight connectivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center hover-lift" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3 float-anim" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-briefcase"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Residency Assessment</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if you qualify for the UAE Golden Visa or Singapore's premium investor passes. Speak with our specialists today.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Evaluate My Profile</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0 hover-lift">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top Asian Destinations</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Dubai, UAE:</strong> Tax-free business hub</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Singapore:</strong> Global wealth management</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Kuala Lumpur, Malaysia:</strong> Tech & Lifestyle</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Bangkok, Thailand:</strong> Premium retirement</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> <strong>Hong Kong:</strong> Gateway to mainland Asia</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4 premium-gradient-text">Your Transition to Asia</h2>
+            <p class="text-muted">Asian immigration frameworks reward investment, talent, and compliance. We ensure your application is flawless from day one.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">01</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Program Selection</h4>
+              <p class="text-muted small">We analyze your capital, business intentions, and family needs to select the perfect visa (e.g., UAE Golden Visa vs. Singapore GIP).</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">02</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Dossier Preparation</h4>
+              <p class="text-muted small">We compile all necessary corporate documents, bank statements, medical clearances, and police checks required by local authorities.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">03</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Investment & Filing</h4>
+              <p class="text-muted small">We assist with local banking setup, property acquisition, or company incorporation, and officially file your residency petition.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">04</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Residency Issuance</h4>
+              <p class="text-muted small">Upon approval, your long-term residency cards (like the Emirates ID) are issued, granting full rights to you and your dependents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4 premium-gradient-text">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Who qualifies for the UAE Golden Visa?</h5>
+                <p class="text-muted small mb-0">The 10-year Golden Visa is available to real estate investors (minimum investment of AED 2 million), entrepreneurs with approved projects, highly skilled professionals (doctors, engineers, IT experts) with a high salary bracket, and outstanding students/graduates.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Does Asian residency lead to citizenship?</h5>
+                <p class="text-muted small mb-0">Generally, Asian nations are very protective of their citizenship. While Singapore offers a clear (but strict) path from Permanent Residency to Citizenship, countries like the UAE and Thailand primarily offer long-term, renewable residency visas rather than passports.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Can I bring my family?</h5>
+                <p class="text-muted small mb-0">Yes. Programs like the UAE Golden Visa, Singapore GIP, and Malaysia MM2H are designed with families in mind, allowing you to sponsor your spouse, children, and in some cases, your parents and domestic staff.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Elevate Your Global Presence?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Consult with our Asian immigration experts to map out your Golden Visa or corporate expansion strategy.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3 hover-lift" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Book Your Strategy Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

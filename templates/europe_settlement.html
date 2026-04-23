@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .premium-gradient-text {
+            background: linear-gradient(90deg, #1e293b, #F96D00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+        }
+        .float-anim {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .pathway-card {
+            border-radius: 12px;
+            border-left: 5px solid #F96D00;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .pathway-card:hover {
+            border-left: 10px solid #1e293b;
+            background: #f8fafc;
+        }
+    </style>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ url_for('static', filename='images/world.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="background: rgba(15, 23, 42, 0.75);"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px;">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread" style="color: white; font-weight: 800; letter-spacing: 1px;">Work & Settle in Europe</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="{{ url_for('index') }}" style="color: rgba(255,255,255,0.8);">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span style="color: #F96D00;">Europe Settlement <i class="ion-ios-arrow-forward"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-8 ftco-animate pr-lg-5">
+            <span class="premium-subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">EU Blue Card & PR Pathways</span>
+            <h2 class="mb-4 premium-gradient-text" style="font-size: 34px;">Secure Your Family's Future in the EU</h2>
+            <p class="text-muted" style="font-size: 16px; line-height: 1.8;">Europe offers an unparalleled combination of strong worker rights, universal healthcare, and borderless travel. Through highly accessible settlement pathways like the EU Blue Card, skilled professionals can build thriving careers in top innovation hubs while securing a safe, high-quality life for their families.</p>
+            
+            <div class="my-5 hover-lift" style="border-radius: 12px; overflow: hidden;">
+                <img src="{{ url_for('static', filename='images/europe-work.avif') }}" alt="Settle in Europe" onerror="this.src='{{ url_for('static', filename='images/bg_2.jpg') }}'" class="img-fluid w-100" style="max-height: 380px; object-fit: cover;">
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Top European Settlement Pathways</h3>
+            <p class="text-muted mb-4">We specialize in navigating the varied immigration and settlement systems of EU member states, helping you secure the right long-term residency for your expertise:</p>
+            
+            <div class="pathway-list mb-5">
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">1. The EU Blue Card</h5>
+                    <p class="text-muted small mb-0">The premier work and residence permit for highly skilled non-EU citizens. It requires a university degree and a valid employment contract meeting a specific salary threshold. It offers expedited family reunification and a highly accelerated track to Permanent Residency (PR).</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">2. National Highly Skilled Visas</h5>
+                    <p class="text-muted small mb-0">Country-specific settlement programs like the Netherlands' Highly Educated Migrant visa, France's Passeport Talent, or Sweden's Work Permit for specialized IT, engineering, and scientific talent.</p>
+                </div>
+                <div class="p-4 shadow-sm mb-3 pathway-card">
+                    <h5 style="font-weight: 800; color: #1e293b;">3. Job Seeker & Opportunity Visas</h5>
+                    <p class="text-muted small mb-0">Pathways like Germany's new Chancenkarte (Opportunity Card) allow skilled professionals to enter the EU without a prior job offer, granting you time to secure local employment and transition seamlessly into long-term residency.</p>
+                </div>
+            </div>
+
+            <h3 class="mb-4" style="font-weight: 700; color: #1e293b;">Why Families Settle in Europe</h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-map"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Schengen Mobility</h5>
+                            <p class="text-muted small mb-0">Travel, live, and eventually work freely across 27 European countries without border checks or additional visas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-heart"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Universal Healthcare</h5>
+                            <p class="text-muted small mb-0">Access world-class, state-subsidized public healthcare and excellent, free public education for your children.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-users"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Immediate Family Rights</h5>
+                            <p class="text-muted small mb-0">EU Blue Card holders can bring their spouses, who immediately receive full, unrestricted rights to work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-item d-flex align-items-start p-4 bg-white shadow-sm h-100 hover-lift" style="border-radius: 12px;">
+                        <div class="mr-3 float-anim" style="width: 45px; height: 45px; font-size: 24px; color: #F96D00;"><span class="icon-home"></span></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight: 700; font-size: 16px;">Fast-Track to PR</h5>
+                            <p class="text-muted small mb-0">Accelerated pathways to Permanent Residency (as little as 21 months in Germany with language proficiency).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box bg-white p-4 rounded-premium shadow border-0 text-center hover-lift" style="position: sticky; top: 100px;">
+              <div class="icon-wrapper mb-3 float-anim" style="font-size: 50px; color: #F96D00;">
+                  <span class="icon-file-text-o"></span>
+              </div>
+              <h3 class="heading-sidebar mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">EU Settlement Check</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Find out if your degree is recognized in Europe and if your target salary meets the Blue Card threshold for settlement.</p>
+              
+              <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 py-3 mb-2" style="border-radius: 30px; font-weight: 700; text-transform: uppercase;">Evaluate My Profile</a>
+              <a href="tel://+919888697888" class="btn btn-outline-dark w-100 py-3" style="border-radius: 30px; font-weight: 600;"><i class="icon-phone mr-2"></i> +91 9888697888</a>
+            </div>
+            
+            <div class="sidebar-box bg-white p-4 mt-4 rounded-premium shadow border-0 hover-lift">
+                <h3 class="heading-sidebar mb-3" style="font-weight: 700; font-size: 18px; color: #1e293b;">Top EU Tech & Business Hubs</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Berlin & Munich, Germany</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Amsterdam, Netherlands</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Stockholm, Sweden</li>
+                    <li class="mb-2"><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Dublin, Ireland</li>
+                    <li><i class="ion-ios-checkmark-circle mr-2" style="color: #F96D00;"></i> Paris, France</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">The Process</span>
+            <h2 class="mb-4 premium-gradient-text">Your Journey to Settlement</h2>
+            <p class="text-muted">European bureaucracy can be strict. We streamline the entire process, managing the paperwork so you can focus on your career and family.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">01</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Degree Recognition</h4>
+              <p class="text-muted small">We legally verify that your university degree is recognized by the target EU country's education ministry (e.g., using the Anabin database).</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">02</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Contract Verification</h4>
+              <p class="text-muted small">We review your European employment contract to ensure it meets the strict minimum salary thresholds required for the EU Blue Card.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">03</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Embassy Application</h4>
+              <p class="text-muted small">We prepare your dossier and secure your national entry visa (D-Visa) at the local European consulate or embassy in your home country.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center mb-4 ftco-animate">
+            <div class="process-step p-4 bg-white shadow h-100 hover-lift" style="border-radius: 12px; border-top: 4px solid #F96D00;">
+              <div class="step-number mb-3" style="font-size: 28px; font-weight: 900; color: #e2e8f0;">04</div>
+              <h4 style="font-weight: 800; font-size: 18px; color: #1e293b;">Post-Landing & PR</h4>
+              <p class="text-muted small">After landing, we assist with your local town registration and your Foreigners' Authority appointment, and map your timeline to Permanent Residency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: #F96D00; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">FAQ</span>
+            <h2 class="mb-4 premium-gradient-text">Frequently Asked Questions</h2>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="faq-list">
+              
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> What exactly is the EU Blue Card?</h5>
+                <p class="text-muted small mb-0">The EU Blue Card is a highly sought-after residence and work permit designed to attract highly qualified workers from outside the EU. It grants you the right to live and work in the issuing EU member state, with a clear path to permanent settlement.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Do I need to speak the local language to settle?</h5>
+                <p class="text-muted small mb-0">To secure the initial visa and work in many IT, Engineering, and corporate roles, English is sufficient. However, to upgrade from a temporary visa to Permanent Residency (PR) or Citizenship, you will eventually need to pass a basic language test (usually A2 or B1 level) in the local language.</p>
+              </div>
+
+              <div class="bg-white p-4 mb-3 shadow-sm ftco-animate hover-lift" style="border-radius: 8px;">
+                <h5 style="font-weight: 800; font-size: 16px; color: #1e293b;"><i class="ion-ios-help-circle mr-2 float-anim" style="color: #F96D00; display: inline-block;"></i> Can I move to another EU country later?</h5>
+                <p class="text-muted small mb-0">Yes. One of the greatest settlement benefits of the EU Blue Card is mobility. After working for 12 months in one country, you are permitted to move to another participating EU member state for highly qualified employment without starting the whole process over.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary" style="background: linear-gradient(90deg, #1e293b 0%, #334155 100%);">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 text-center ftco-animate">
+            <h2 class="mb-3" style="color: white; font-weight: 800;">Ready to Secure Your Family's European Future?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 16px;" class="mb-4">Speak with our European settlement experts to check your degree recognition and map out your permanent residency timeline.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-white px-5 py-3 hover-lift" style="border-radius: 30px; font-weight: 700; color: #1e293b; text-transform: uppercase;">Book Your Free Assessment Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
