@@ -246,5 +246,7 @@ def book_consultation():
     return render_template('book_Consultation.html')
 
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug = os.environ.get("DEBUG", "False") == "True"
+    app.run(debug=debug)

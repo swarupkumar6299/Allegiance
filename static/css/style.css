@@ -9835,6 +9835,32 @@ opacity:1;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+.testimonial-card {
+    backdrop-filter: blur(12px); /* slightly reduce for mobile performance */
+}
+
+@media (max-width: 768px) {
+
+    .testimonial-slider {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+
+    /* Hide scrollbar */
+    .testimonial-slider::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .modern-footer{
 background:#0f172a;
 color:#cbd5e1;
@@ -10610,9 +10636,30 @@ color:#94a3b8;
     display: block !important; /* Shows only the hovered one */
 }
 
-/* Optional: Removes the default bootstrap dropdown arrows if they look messy */
-.dropdown-submenu > a::after {
-    display: none !important;
+/* MOBILE FIX */
+@media (max-width: 991px) {
+
+    .premium-dropdown .dropdown-menu {
+        display: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .premium-dropdown.show > .dropdown-menu {
+        display: block !important;
+    }
+
+    /* Submenu fix for mobile */
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        display: none !important;
+        transform: none !important;
+    }
+
+    .dropdown-submenu.show > .dropdown-menu {
+        display: block !important;
+    }
 }
 
 

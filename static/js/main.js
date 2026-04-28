@@ -274,3 +274,27 @@ responsive:{
 }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Handle submenu toggle on mobile
+    document.querySelectorAll('.dropdown-submenu > a').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+
+            if (window.innerWidth < 992) {
+                e.preventDefault();
+
+                let parent = this.parentElement;
+
+                // Close other open submenus
+                document.querySelectorAll('.dropdown-submenu').forEach(el => {
+                    if (el !== parent) {
+                        el.classList.remove('show');
+                    }
+                });
+
+                parent.classList.toggle('show');
+            }
+        });
+    });
+
+});
