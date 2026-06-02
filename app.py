@@ -10,7 +10,7 @@ load_dotenv()
 
 app = Flask(__name__)
  
-app.secret_key = os.environ.get("SECRET_KEY") 
+app.secret_key = "4f7b8a9c2d1e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a"
 
 # ==========================================
 # EMAIL SETUP (NEW)
