@@ -3,23 +3,32 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
+from threading import Thread
 
 # 1. Load the secret variables from your .env file
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = "super_secret_allegience_key"  
+#app.secret_key = "super_secret_allegience_key" 
+app.secret_key = os.environ.get("ecce1c95e75dec84b171b681609dd98719e376dcd4bc58e6de7582c3975dffdc") 
 
 # ==========================================
 # EMAIL SETUP (NEW)
 # ==========================================
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
-app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME')
+# ... existing mail config ...
 mail = Mail(app) # Initialize Flask-Mail
+
+# --- ADD THIS NEW FUNCTION ---
+def send_async_email(app, msg):
+    with app.app_context():
+        try:
+            print("Starting email send in background...")
+            mail.send(msg)
+            print("Email sent successfully in background")
+        except Exception as e:
+            print("BACKGROUND EMAIL ERROR:", str(e))
+# -----------------------------
 
 # ==========================================
 # DATABASE SETUP
@@ -185,12 +194,13 @@ def contact():
         )
 
         # NEW: Send the email
-        try:
-            mail.send(msg)
-            flash("Thank you! Your message has been sent successfully.", "success")
-        except Exception as e:
-            print(f"Error sending email: {e}")
-            flash("Sorry, there was an issue sending your message.", "error")
+        # NEW: Send the email in the background
+        thread = Thread(target=send_async_email, args=(app, msg))
+        thread.start()
+        
+        # Immediately tell the user it was successful
+        flash("Thank you! Your message has been sent successfully.", "success")
+
 
         return redirect(url_for('contact'))
 
@@ -233,15 +243,13 @@ def book_consultation():
         )
 
 
-        try:
-            mail.send(msg)
-            flash("Thank you! Your consultation request has been sent.", "success")
-            return redirect(url_for('index'))
-            
-        except Exception as e:
-            print(f"Error sending email: {e}")
-            flash("Sorry, there was an error sending your request.", "error")
-            return redirect(url_for('book_consultation'))
+        # Send the consultation email in the background
+        thread = Thread(target=send_async_email, args=(app, msg))
+        thread.start()
+        
+        # Instantly return success to the UI
+        flash("Thank you! Your consultation request has been sent.", "success")
+        return redirect(url_for('index'))
 
     return render_template('book_Consultation.html')
 
