@@ -9,7 +9,7 @@ from threading import Thread
 load_dotenv()
 
 app = Flask(__name__)
-#app.secret_key = "super_secret_allegience_key" 
+ 
 app.secret_key = os.environ.get("SECRET_KEY") 
 
 # ==========================================
